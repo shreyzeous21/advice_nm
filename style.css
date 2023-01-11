@@ -1,0 +1,78 @@
+:root {
+	--light-cyan: hsl(193, 38%, 86%);
+	--neon-green: hsl(150, 100%, 66%);
+	--greyish-blue: hsl(217, 19%, 38%);
+	--dark-grey-blue: hsl(217, 19%, 24%);
+	--dark-blue: hsl(218, 23%, 16%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    min-height: 100vh;
+	background-color: var(--dark-blue);
+	font-family: "Manrope", sans-serif;
+	display: grid;
+	place-items: center;
+}
+.main-container{
+    position: relative;
+	width: 45vw;
+	height: auto;
+	background-color: var(--dark-grey-blue);
+	border-radius: 16px;
+}
+.window{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 4rem;
+}
+.advice-generator-num{
+    color: var(--neon-green);
+    letter-spacing: .3rem;
+}
+.advice-genetaror-devide > img{
+    width: 100%;
+}
+.advice{
+    text-align: center;
+    font-size: 2rem;
+    color: var(--light-cyan);
+}
+.btn{
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+	height: auto;
+	padding: 1rem;
+	border-radius: 50%;
+	border: none;
+	background-color: var(--neon-green);
+	cursor: pointer;
+}
+.btn:hover{
+    box-shadow: 0px 0px 25px var(--neon-green);
+}
+.btn-img {
+	transition: transform 800ms;
+}
+.btn-img:hover{
+	transform: rotate(360deg);
+}
+@media (max-width: 800px) {
+	.advice-generator {
+		width: 80vw;
+	}
+}
+
+@media (max-width: 440px) {
+	.advice {
+		font-size: 1.5rem;
+	}
+}
